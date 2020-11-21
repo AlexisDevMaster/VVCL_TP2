@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.is;
 import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class Tp2ApplicationTests {
 
     @Test
