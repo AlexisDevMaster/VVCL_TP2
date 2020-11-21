@@ -7,7 +7,7 @@ addons:
   sonarcloud:
     organization: "alexisdevmaster"
     token:
-      secure: "M6IUiCvm1kVf/YdQ2kOElCvu8WYAi+xJTMFnYSYf2IkNz9LF3io7O9H78sRTFcVDusKNQrJwcGSy/d3PkkEsZfd4swmZQK9fMGpsqbClobVxMQ6UdQs3jX8QG1B09FTJOlQ1xf2IfEWx/vTzqTrHXY0IxI2vntI0vrIj/+N2rFm2xlAEzFDljs4+1yG9iKTdI2dyzWWe1OSiFNpv6UswXYHsVMysAltgPHbqYmqZ5MTqrpEB1aQQj2ALIBWYb4nSj9a41NYpggC0IpziE8CToZOxbHP04c4argI4h5V5Akc59fi/Cf5eCOo6WxJ4nEoYMBAVIZx3dBLXKfwTnpyYiVLViJtRqBURCexUp7NuySUHiwOtImkxqzOZghxT1luHBH2CHCaaDzwrzhAnE4/WVB7IrgoixZRnO/55OXeZgRE+m5xZuXFZR2iQ4vYKnWb28fgh1XmflYRokRZEpFVZAW+UPy3RC87cYsvF34vDeGBkNcd9zi5OVVOttKNYWQeU7ufqWUEFva+e5+1OWuiXlyPc126NsNha2ZuejGQt4jvDTpAeNjUOAs5OeX8DSR3ZO15FATrd5bSljTUN65pNP9hsjnofGXjuhyERnI5yQyZbaSLv+4/oScK9krd5BZKaeOMfzVflggIUinvh3MGi1aQyNtk/pZNv61+sutFYaWE="
-script:
+      secure: $SECRETVALUE
+  script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=AlexisDevMaster_VVCL_TP2
