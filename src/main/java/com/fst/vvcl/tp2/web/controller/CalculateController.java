@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping(value = "/calculate", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class CalculateController {
 
     private CalculateService calculateService;
@@ -31,8 +32,9 @@ public class CalculateController {
     }
 
     @PostMapping("/divide")
-    public Result divide(@RequestParam int num) {
+    public Result divide(@RequestParam int num)throws ArithmeticException {
         calculateService.divide(num);
+        System.out.println(calculateService.getResult().getResult());
         return calculateService.getResult();
     }
 

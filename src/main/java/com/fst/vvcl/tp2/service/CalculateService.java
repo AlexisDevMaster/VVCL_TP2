@@ -24,7 +24,7 @@ public class CalculateService {
         this.result.setResult(this.result.getResult() - adder);
     }
 
-    public void divide(int adder) {
+    public void divide(int adder) throws ArithmeticException{
         this.result.setResult(this.result.getResult() / adder);
     }
 
